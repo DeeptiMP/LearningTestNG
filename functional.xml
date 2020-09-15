@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Functional">
+	<!-- <groups> <run> <include name="bvt"></include> </run> </groups> -->
+	<listeners>
+		<listener class-name="customlistener.Listeners"></listener>
+		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+		 
+	</listeners>
+	<test name="Annotation Test">
+		<classes>
+			<class name="learningTestNG.Testcase" />
+		</classes>
+	</test> <!-- Test -->
+
+
+
+	<test name="Assertion Test">
+		<classes>
+
+			<class name="learningTestNG.Testcase2" />
+
+		</classes>
+	</test> <!-- Test -->
+	<test name="SoftDependany Test">
+		<groups> <!-- Test Level -->
+			<run>
+				<exclude name="abc"></exclude>
+			</run>
+		</groups>
+		<classes>
+			<class name="learningTestNG.Testcase3" />
+
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="Failure Test">
+		<classes>
+
+			<class name="learningTestNG.TestFailure" />
+
+		</classes>
+	</test> <!-- Test -->
+
+</suite> <!-- Suite -->

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Regression]">
+  <test thread-count="5" name="Failure Test(failed)">
+    <classes>
+      <class name="learningTestNG.Testcase2">
+        <methods>
+          <include name="validateTitles"/>
+        </methods>
+      </class> <!-- learningTestNG.Testcase2 -->
+    </classes>
+  </test> <!-- Failure Test(failed) -->
+</suite> <!-- Failed suite [Regression] -->

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Functional]">
+  <listeners>
+    <listener class-name="customlistener.Listeners"/>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+  </listeners>
+  <test thread-count="5" name="Assertion Test(failed)">
+    <classes>
+      <class name="learningTestNG.Testcase2">
+        <methods>
+          <include name="setUp"/>
+          <include name="validateTitles"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- learningTestNG.Testcase2 -->
+    </classes>
+  </test> <!-- Assertion Test(failed) -->
+  <test thread-count="5" name="SoftDependany Test(failed)">
+    <groups>
+      <run>
+        <exclude name="abc"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="learningTestNG.Testcase3">
+        <methods>
+          <include name="setUp"/>
+          <include name="userLogin"/>
+          <include name="userReg"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- learningTestNG.Testcase3 -->
+    </classes>
+  </test> <!-- SoftDependany Test(failed) -->
+  <test thread-count="5" name="Failure Test(failed)">
+    <classes>
+      <class name="learningTestNG.TestFailure">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="doLogin"/>
+        </methods>
+      </class> <!-- learningTestNG.TestFailure -->
+    </classes>
+  </test> <!-- Failure Test(failed) -->
+</suite> <!-- Failed suite [Functional] -->
